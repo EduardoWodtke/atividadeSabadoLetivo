@@ -6,35 +6,24 @@
 
     //ENTRADA
 
-    const numeroUm = Number(prompt("Informe numero"))
-    const numeroDois = Number(prompt("Informe numero"))
-    const numeroTres = Number(prompt("Informe numero"))
+    const n1 = Number(prompt("Informe o primeiro numero:"))
+    const n2 = Number(prompt("Informe o segundo numero:"))
+    const n3 = Number(prompt("Informe o terceiro numero:"))
 
     //PROCESSAMENTO
-
-    if (numeroUm > numeroDois && numeroUm > numeroTres && numeroDois > numeroTres ) {
-        
-        document.write(`${numeroUm}, ${numeroDois} e ${numeroTres}`)
-
-    } else if (numeroUm < numeroDois && numeroUm < numeroTres && numeroDois < numeroTres) {
-        
-        document.write(`${numeroTres}, ${numeroDois} e ${numeroUm}`)
-
-    } else if (numeroDois > numeroTres && numeroDois > numeroUm && numeroUm > numeroTres) {
-        
-        document.write(`${numeroDois}, ${numeroUm} e ${numeroTres}`)
-
-    } else if (numeroTres > numeroDois && numeroTres > numeroUm && numeroUm > numeroDois){
-        
-        document.write(`${numeroTres}, ${numeroUm} e ${numeroDois}`)
-
-    } else if (numeroUm > numeroDois && numeroUm > numeroTres && numeroTres > numeroDois){
-        document.write(`${numeroUm}, ${numeroTres} e ${numeroDois}`)
+    if (n1 > n2 && n1 > n3 && n2 > n3) {
+        document.write(`${n1}, ${n2} e ${n3}`)
+    } else if (n1 < n2 && n1 < n3 && n2 < n3) {
+        document.write(`${n3}, ${n2} e ${n1}`)
+    } else if (n2 > n3 && n2 > n1 && n1 > n3) {
+        document.write(`${n2}, ${n1} e ${n3}`)
+    } else if (n3 > n2 && n3 > n1 && n1 > n2) {
+        document.write(`${n3}, ${n1} e ${n2}`)
+    } else if (n1 > n2 && n1 > n3 && n3 > n2) {
+        document.write(`${n1}, ${n3} e ${n2}`)
     } else {
-        document.write(`${numeroDois}, ${numeroTres} e ${numeroUm}`)
+        document.write(`${n2}, ${n3} e ${n1}`)
     }
-
-    
     //SAÍDA
 
 
