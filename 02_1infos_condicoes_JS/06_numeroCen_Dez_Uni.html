@@ -11,12 +11,18 @@
     */
 
     //ENTRADA
+    let n = parseInt(prompt("Número(até 1000):"))
 
+    //processamento
 
-    //PROCESSAMENTO
+    const c = Math.floor(n / 100)
+    n = n % 100
+    const d = Math.floor(n / 10)
+    const u = n % 10
 
-    
-    //SAÍDA
+    //saida
+
+    document.write(`${c} centenas, ${d}, dezenas e ${u} unidades`)
 
 
 </script>

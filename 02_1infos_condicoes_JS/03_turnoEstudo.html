@@ -13,9 +13,19 @@
 
     //ENTRADA
 
+    const turno = prompt("Que turno você estuda?")
 
     //PROCESSAMENTO
 
+    if (turno === "matutino") {      
+        document.write("Bom dia")      
+    } else if(turno === "vespertino") {
+        document.write("Boa tarde")
+    }else if(turno === "noturno"){
+        document.write("Boa noite")
+    } else{
+        document.write("Invalido irmão")
+    }
     
     //SAÍDA
 
