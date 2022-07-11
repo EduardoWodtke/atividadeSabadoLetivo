@@ -9,13 +9,34 @@
 
     //ENTRADA
 
-    const valorDoSaque = Number(prompt("quanto se quer sacar meu caro?(minimo 10 conto maximo 600)"))
+    let valorDoSaque = Number(prompt("quanto se quer sacar meu caro?(minimo 10 conto maximo 600)"))
 
     //PROCESSAMENTO
 
-
+    const c = Math.floor(valorDoSaque / 100)
+    valorDoSaque = valorDoSaque % 100
+    if(valorDoSaque >= 50){
+    const notasDeCinquenta = Math.floor(valorDoSaque / 50)
+    const u = valorDoSaque % 10
+    if(u >= 5){
+        const cincoReais = Math.ceil(u / 5)
+        document.write(`${c} notas de cem, ${notasDeCinquenta} nota(s) de cinquenta, ${d} de dez, ${cincoReais} de cinco, ${u} de um`)
+    } else {
+        document.write(`${c} notas de cem, ${notasDeCinquenta} nota(s) de cinquenta, ${d} de dez, ${u} notas de um real`)
+    }
+    }else{  
+    const d = Math.floor(valorDoSaque / 10)
+    const u = valorDoSaque % 10
+    if(u >= 5){
+        const cincoReais = Math.ceil(u / 5)
+        document.write(`${c} notas de cem, ${notasDeCinquenta} nota(s) de cinquenta, ${d} de dez, ${cincoReais} de cinco, ${u} de um`)}
+        else{
+    document.write(`${c} notas de cem,${d} notas de 10 e ${u} notas de um real`)
+    }}
     
     //SAÍDA
+
+    
 
 
 </script>
