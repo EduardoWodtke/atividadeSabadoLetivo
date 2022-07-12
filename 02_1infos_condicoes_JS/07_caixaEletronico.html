@@ -13,30 +13,49 @@
 
     //PROCESSAMENTO
 
-    const c = Math.floor(valorDoSaque / 100)
-    valorDoSaque = valorDoSaque % 100
-    if(valorDoSaque >= 50){
-    const notasDeCinquenta = Math.floor(valorDoSaque / 50)
-    const u = valorDoSaque % 10
-    if(u >= 5){
-        const cincoReais = Math.ceil(u / 5)
-        document.write(`${c} notas de cem, ${notasDeCinquenta} nota(s) de cinquenta, ${d} de dez, ${cincoReais} de cinco, ${u} de um`)
-    } else {
-        document.write(`${c} notas de cem, ${notasDeCinquenta} nota(s) de cinquenta, ${d} de dez, ${u} notas de um real`)
+    if (valorDoSaque >= 100) {
+        const c = Math.floor(valorDoSaque / 100)
+        valorDoSaque = valorDoSaque % 100
+        if (valorDoSaque >= 50) {
+            const notasDeCinquenta = Math.floor(valorDoSaque / 50)
+            u = valorDoSaque % 10
+            if (u >= 5) {
+                const u = valorDoSaque % 10
+                const notasDeCinco = Math.floor(u / 5)
+                document.write(`${c} nota(s) de cem ${notasDeCinquenta} nota(s) de cinquenta ${notasDeCinco} nota(s) de cinco `)
+            } else {
+                const notasDeCinquenta = Math.floor(valorDoSaque / 50)
+                const d = Math.floor(valorDoSaque / 10)
+                const u = valorDoSaque % 10
+                document.write(`${c} nota(s) de cem ${notasDeCinquenta} nota(s) cinquenta ${d} nota(s) de dez ${u} moeda(s) de um`)
+            }
+        } else {
+            const d = Math.floor(valorDoSaque / 10)
+            const u = valorDoSaque % 10
+            if (u >= 5) {
+                const u = valorDoSaque % 10
+                const notasDeCinco = Math.floor(u / 5)
+                document.write(`${c} nota(s) de cem ${d} nota(s) de dez ${notasDeCinco} nota(s) de cinco`)
+            } else {
+                const d = Math.floor(valorDoSaque / 10)
+                const u = valorDoSaque % 10
+                document.write(`${c} nota(s) de cem ${d} nota(s) de dez ${u} moeda(s) de um`)
+            }
+        }
+    }   else {
+        valorDoSaque = valorDoSaque % 100
+        if (valorDoSaque >= 50) {
+            const notasDeCinquenta = Math.floor(valorDoSaque / 50)
+            document.write(`${notasDeCinquenta} nota(s) de cinquenta ${u} moeda(s) de um`)
+        } else {
+            const d = Math.floor(valorDoSaque / 10)
+            const u = valorDoSaque % 10
+            document.write(`${d} nota(s) de dez ${u} moeda(s) de um`)
+        }
     }
-    }else{  
-    const d = Math.floor(valorDoSaque / 10)
-    const u = valorDoSaque % 10
-    if(u >= 5){
-        const cincoReais = Math.ceil(u / 5)
-        document.write(`${c} notas de cem, ${notasDeCinquenta} nota(s) de cinquenta, ${d} de dez, ${cincoReais} de cinco, ${u} de um`)}
-        else{
-    document.write(`${c} notas de cem,${d} notas de 10 e ${u} notas de um real`)
-    }}
-    
     //SAÍDA
 
-    
+
 
 
 </script>
