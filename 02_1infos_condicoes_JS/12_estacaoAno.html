@@ -7,23 +7,51 @@
 
     //ENTRADA
 
-    const hemisferio = prompt("Informe seu hemisferio")
-    const mes = parseInt(prompt("Mes(em numero decimal)"))
+    const hemisferio = String(prompt("Informe seu hemisferio"))
+    const mes = parseInt(prompt("Mes (em numero decimal)"))
 
     //PROCESSAMENTO
 
-    if(hemisferio === "norte" && mes === "1" && mes === "2" && mes === "3"){
+    if (hemisferio === "norte") {
 
-        document.write("Inverno")
+        if (mes === 1 || mes === 2 || mes === 3) {
 
-    }else if(hemisferio === "norte" && mes === "4" && mes === "5" && mes === "6"){
+            document.write("inverno")
 
-        document.write("")
+        } else if (mes === 4 && mes === 5 && mes === 6) {
 
-    }else if (hemisferio === "norte" && mes === "7" && mes === "8" && mes === "9"){
+            document.write("primavera")
 
-    }
+        } else if (mes === 7 || mes === 8 || mes === 9) {
+
+            document.write("verão")
+
+        } else{
+
+            document.write("outono")
+        } 
+    } else {
+        
+        if (mes === 1 || mes === 2 || mes === 3){
+
+            document.write("verão")
+            
+        } else if (mes === 4 && mes === 5 && mes === 6){
+
+            document.write("outono")
+
+        } else if (mes === 7 || mes === 8 || mes === 9){
+
+            document.write("inverno")
+            
+        } else {
+
+            document.write("primavera")
+            
+        }
     
+    }
+
     //SAÍDA
 
 
