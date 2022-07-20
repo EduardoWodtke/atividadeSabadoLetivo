@@ -15,9 +15,37 @@
 
     //ENTRADA
 
+    const tipoDeCombustivel = prompt("tipo de combustivel:(A-alcool e G-gasolina)").toUpperCase
+
+    const quantosLitrosDeCombustivel = Number(prompt("Quantos litros de combustivel?"))
 
     //PROCESSAMENTO
 
+    if(tipoDeCombustivel === "A"){
+        if(quantosLitrosDeCombustivel <= 20){
+            const valorBruto = quantosLitrosDeCombustivel * 6.10
+            const valorDoDesconto = valorBruto * 0.03
+            const valorComDesconto = valorBruto - valorDoDesconto
+            document.write(`Valor total a se pagar: R$${valorComDesconto}; Desconto de: R$${valorDoDesconto}; Valor bruto: R$${valorBruto}.`)
+        }else{
+            const valorBruto = quantosLitrosDeCombustivel * 6.10
+            const valorDoDesconto = valorBruto * 0.05
+            const valorComDesconto = valorBruto - valorDoDesconto
+            document.write(`Valor total a se pagar: R$${valorComDesconto}; Desconto de: R$${valorDoDesconto}; Valor bruto: R$${valorBruto}.`)
+        }
+    } else{
+        if(quantosLitrosDeCombustivel <= 20){
+            const valorBruto = quantosLitrosDeCombustivel * 6.50
+            const valorDoDesconto = valorBruto * 0.04
+            const valorComDesconto = valorBruto - valorDoDesconto
+            document.write(`Valor total a se pagar: R$${valorComDesconto}; Desconto de: R$${valorDoDesconto}; Valor bruto: R$${valorBruto}.`) 
+        }else{
+            const valorBruto = quantosLitrosDeCombustivel * 6.50
+            const valorDoDesconto = valorBruto * 0.06
+            const valorComDesconto = valorBruto - valorDoDesconto
+            document.write(`Valor total a se pagar: R$${valorComDesconto}; Desconto de: R$${valorDoDesconto}; Valor bruto: R$${valorBruto}.`)
+        }
+    }
     
     //SAÍDA
 

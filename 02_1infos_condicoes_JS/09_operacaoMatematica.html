@@ -8,10 +8,40 @@
     */
 
     //ENTRADA
+    
+    const operacao = prompt("informe a operação que você quer:(par ou ímpar, positivo ou negativo, inteiro ou decimal).")
 
+    const numeroUm = Number(prompt("Informe o primeiro numero:"))
+    
+    const numeroDois = Number(prompt("Informe o primeiro numero:"))
 
     //PROCESSAMENTO
 
+    if(operacao === "par ou impar"){
+        if (numeroUm % 2 === 0 && numeroDois % 2 === 0) {
+        document.write("ambos são par")
+    } else if (numeroUm % 2 === 0 && numeroDois % 2 ==! 0) {
+        document.write("numero um par e numero dois impar")
+    } else if (numeroUm % 2 ==! 0 && numeroDois % 2 === 0){
+        document.write("numero um é impar e numero dois é par")
+    } else{
+        document.write(`ambos são impar`)
+    }
+    } else if (operacao === "positivo ou negativo"){
+        if(numeroUm > 0 && numeroDois > 0){
+            document.write(`ambos são positivos`)
+        } else if(numeroUm > 0 && numeroDois < 0){
+            document.write(`primeiro é positivo e segundo negativo`)
+        } else if (numeroUm < 0 && numeroDois > 0){
+            document.write(`numero um negativo e numero dois positivo`)
+        } else{
+            document.write(`ambos negativo`)
+        }
+    } else{
+        Number.isInteger(numeroUm)
+        Number.isInteger(numeroDois)
+        document.write(`${numeroUm} ${numeroDois}`)
+    }
     
     //SAÍDA
 
