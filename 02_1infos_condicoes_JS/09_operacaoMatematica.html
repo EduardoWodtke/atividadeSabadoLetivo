@@ -8,42 +8,45 @@
     */
 
     //ENTRADA
-    
-    const operacao = prompt("informe a operação que você quer:(par ou ímpar, positivo ou negativo, inteiro ou decimal).")
 
     const numeroUm = Number(prompt("Informe o primeiro numero:"))
-    
+
     const numeroDois = Number(prompt("Informe o primeiro numero:"))
+
+    const operacao = prompt("informe a operação que você quer:(+, -, /, *.).")
+
+    let resultado = 0
 
     //PROCESSAMENTO
 
-    if(operacao === "par ou impar"){
-        if (numeroUm % 2 === 0 && numeroDois % 2 === 0) {
-        document.write("ambos são par")
-    } else if (numeroUm % 2 === 0 && numeroDois % 2 ==! 0) {
-        document.write("numero um par e numero dois impar")
-    } else if (numeroUm % 2 ==! 0 && numeroDois % 2 === 0){
-        document.write("numero um é impar e numero dois é par")
-    } else{
-        document.write(`ambos são impar`)
+    if (operacao === "+") {
+        resultado = numeroDois + numeroUm
+    } else if (operacao === "/") {
+        resultado = numeroUm / numeroDois
+    } else if (operacao === "*") {
+        resultado = numeroUm * numeroDois
+    } else {
+        resultado = numeroUm - numeroDois
     }
-    } else if (operacao === "positivo ou negativo"){
-        if(numeroUm > 0 && numeroDois > 0){
-            document.write(`ambos são positivos`)
-        } else if(numeroUm > 0 && numeroDois < 0){
-            document.write(`primeiro é positivo e segundo negativo`)
-        } else if (numeroUm < 0 && numeroDois > 0){
-            document.write(`numero um negativo e numero dois positivo`)
-        } else{
-            document.write(`ambos negativo`)
-        }
-    } else{
-        Number.isInteger(numeroUm)
-        Number.isInteger(numeroDois)
-        document.write(`${numeroUm} ${numeroDois}`)
-    }
-    
+
     //SAÍDA
+    if (resultado % 2 === 0) {
+        alert("o numero é par")
+    } else {
+        alert("o numero é impar")
+    }
+    if (resultado > 0) {
+        alert("numero positivo")
+    } else {
+        alert("numero negativo")
+    }
+    if (Number.isInteger(resultado)) {
+        alert("é inteiro")
+    } else {
+        alert("é decimal")
+    }
+
+
 
 
 </script>
